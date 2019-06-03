@@ -196,25 +196,23 @@ The operations are:
 3. const Object & back( ) const : returns the object at the end of the
 list (a mutator that returns a reference is also provided).
 4. const Object & front( ) const : returns the object at the front of the list (a mutator that
-returns a reference is also provided). Because a doubly linked list allows efficient changes at the front, but a vector does not,
+returns a reference is also provided).
+
+Because a doubly linked list allows efficient changes at the front, but a vector does not,
 the following two methods are available only for list :
 
 1. void push_front( const Object & x ) : adds x to the front of the list .
 2. void pop_front( ) : removes the object at the front of the list .
+
 The vector has its own set of methods that are not part of list . Two methods allow
 efficient indexing. The other two methods allow the programmer to view and change the
 internal capacity. These methods are:
-
 1. Object & operator[] ( int idx ) : returns the object at index idx in the vector , with no
 bounds-checking (an accessors that returns a constant reference is also provided).
-2. Object & at( int idx ) :
-returns the object at index idx in the vector , with bounds-
+2. Object & at( int idx ) : returns the object at index idx in the vector , with bounds-
 checking (an accessor that returns a constant reference is also provided).
-3. int capacity( ) const :
-returns the internal capacity of the vector . (See Section 3.4 for
-more details.)
-4. void reserve( int newCapacity ) :
-sets the new capacity. If a good estimate is available,
+3. int capacity( ) const : returns the internal capacity of the vector .
+4. void reserve( int newCapacity ) : sets the new capacity. If a good estimate is available,
 it can be used to avoid expansion of the vector .
 
 ### Iterator
