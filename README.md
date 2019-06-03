@@ -189,40 +189,41 @@ and false
 otherwise.
 Both vector and list support adding and removing from the end of the list in constant
 time. Both vector and list support accessing the front item in the list in constant time.
+
 The operations are:
-r void push_back( const Object & x ) : adds x to the end of the list.
-r void pop_back( ) : removes the object at the end of the list.
-r const Object & back( ) const : returns the object at the end of the
-list (a mutator that
-returns a reference is also provided).
-r const Object & front( ) const : returns the object at the front of the list (a mutator that
-returns a reference is also provided).
-Because a doubly linked list allows efficient changes at the front, but a vector does not,
+1. void push_back( const Object & x ) : adds x to the end of the list.
+2. void pop_back( ) : removes the object at the end of the list.
+3. const Object & back( ) const : returns the object at the end of the
+list (a mutator that returns a reference is also provided).
+4. const Object & front( ) const : returns the object at the front of the list (a mutator that
+returns a reference is also provided). Because a doubly linked list allows efficient changes at the front, but a vector does not,
 the following two methods are available only for list :
-r void push_front( const Object & x ) : adds x to the front of the list .
-r void pop_front( ) : removes the object at the front of the list .
+
+1. void push_front( const Object & x ) : adds x to the front of the list .
+2. void pop_front( ) : removes the object at the front of the list .
 The vector has its own set of methods that are not part of list . Two methods allow
 efficient indexing. The other two methods allow the programmer to view and change the
 internal capacity. These methods are:
-r Object & operator[] ( int idx ) : returns the object at index idx in the vector , with no
-bounds-checking (an accessor that returns a constant reference is also provided).
-r Object & at( int idx ) :
+
+1. Object & operator[] ( int idx ) : returns the object at index idx in the vector , with no
+bounds-checking (an accessors that returns a constant reference is also provided).
+2. Object & at( int idx ) :
 returns the object at index idx in the vector , with bounds-
 checking (an accessor that returns a constant reference is also provided).
-r int capacity( ) const :
+3. int capacity( ) const :
 returns the internal capacity of the vector . (See Section 3.4 for
 more details.)
-r void reserve( int newCapacity ) :
+4. void reserve( int newCapacity ) :
 sets the new capacity. If a good estimate is available,
 it can be used to avoid expansion of the vector .
 
 ### Iterator
 #### Getting an Iterator
 For the first issue, the STL lists (and all other STL containers) define a pair of methods:
-r iterator begin( ) :
+1. iterator begin( ) :
 returns an appropriate iterator representing the first item in the
 container.
-r iterator end( ) :
+2. iterator end( ) :
 returns an appropriate iterator representing the endmarker in the
 container (i.e., the position after the last item in the container).
 
